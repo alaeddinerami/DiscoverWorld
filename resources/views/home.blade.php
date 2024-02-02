@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body class=" w-[100vw]">
     <!-- component -->
 
 <div class="flex flex-wrap place-items-center ">
