@@ -102,12 +102,15 @@ class AventureController extends Controller
             $aventure ->orderByDesc('created_at');
         }
         $aventures = $aventure->get();
-        
-        return view('home', compact('aventures','distinations'));
+        $aventuresCount = Aventure::count();
+        $mostPopularDistination = $this->mostPopularDestination();
+
+        return view('home', compact('aventures','distinations','aventuresCount','mostPopularDistination'));
 
     }
 
     public function mostPopularDestination(){
+
         $result = DB::select("SELECT distinations.*, COUNT(aventures.id) as adventure_count FROM distinations LEFT JOIN aventures ON distinations.id = aventures.distination_id GROUP BY distinations.id, distinations.nameDistination,distinations.created_at,distinations.updated_at ORDER BY adventure_count DESC LIMIT 1;");       
         return count($result) > 0 ? (object) $result[0] : null;
     }

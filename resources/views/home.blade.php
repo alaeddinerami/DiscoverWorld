@@ -39,13 +39,7 @@
     </section>
   </div>
   <!-- Does this resource worth a follow? -->
-  <div class="absolute bottom-0 right-0 mb-4 mr-4 z-10">
-      <div>
-          <a title="Follow me on twitter" href="https://www.twitter.com/asad_codes" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
-              <img class="object-cover object-center w-full h-full rounded-full" src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/12/twitter-logo.jpg"/>
-          </a>
-      </div>
-  </div>
+  
     <section class="dark:bg-gray-800 dark:text-gray-100">
         <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
             <a rel="noopener noreferrer" href="#"
@@ -150,11 +144,7 @@
                 </a>
             @endforeach
         </div>
-        <div class="flex justify-center">
-            <button type="button"
-                class="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more
-                posts...</button>
-        </div>
+       
     </div>
 </section>
 </body>
