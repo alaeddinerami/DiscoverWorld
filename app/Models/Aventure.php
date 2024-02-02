@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Aventure extends Model
 {
     use HasFactory;
+    protected $with = ['image'];
     protected $fillable = [
         "titelAventure",
         "descriptionsAventeur",

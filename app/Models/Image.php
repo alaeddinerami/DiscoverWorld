@@ -10,7 +10,7 @@ class Image extends Model
     use HasFactory;
 
     public function aventures(){
-        return $this->belongsToMany(Aventure::class);
+        return $this->belongsTo(Aventure::class);
     }
     public function distination(){
         return $this->belongsTo(Distination::class);

@@ -8,6 +8,29 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <section class="relative mx-auto">
+        <!-- navbar -->
+      <nav class="flex justify-between bg-gray-900 text-white w-screen">
+        <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+          <a class="text-3xl font-bold font-heading" href="#">
+            <!-- <img class="h-9" src="logo.png" alt="logo"> -->
+            Discover World
+          </a>
+          <!-- Nav Links -->
+          <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+            <li><a class="hover:text-gray-200" href="{{route('index')}}">Home</a></li>
+            <li><a class="hover:text-gray-200" href="{{route('create')}}">Recite</a></li>
+          
+          </ul>
+          <!-- Header Icons -->
+
+        </div>
+        <!-- Responsive navbar -->
+       
+     
+      </nav>
+      
+    </section>
 	<!-- component -->
     <div class="py-12">
 

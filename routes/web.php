@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home/create', [AventureController::class,'create'])->name('create');
 Route::get('/', [AventureController::class,'index'])->name('index');
+Route::get('/filter/{id}', [AventureController::class,'filter'])->name('filter');
 
 Route::post('/home/store', [AventureController::class,'store'])->name('store');
+Route::post('/order', [AventureController::class,'order'])->name('order');
+Route::get('/single/{aventure}', [AventureController::class,'show'])->name('single');
 
 
 // Route::get('/home', function () {
