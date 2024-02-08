@@ -29,6 +29,7 @@ class AventureController extends Controller
         $distinations = Cache::remember($distinationsCacheKey, now()->addHours(1), function () {
             return Distination::with('image')->get();
         });
+       
     
         // Retrieve the most popular destination from the cache
         $mostPopularDistination = Cache::remember('most_popular_destination', now()->addHours(1), function () {
@@ -74,6 +75,9 @@ class AventureController extends Controller
 
                 $image->save();
             }
+            Cache::forget('aventures_data');
+            Cache::forget('distinations_data');
+            return redirect()->route('create');
         }
 
         // insertion
